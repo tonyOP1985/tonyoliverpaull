@@ -2,14 +2,14 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended',
+    'plugin:nuxt/recommended'
   ],
   plugins: [
   ],
@@ -28,12 +28,12 @@ module.exports = {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
       ignoreRegExpLiterals: true,
-      ignoreComments: true,
+      ignoreComments: true
     }],
     'max-lines-per-function': ['error', {
       max: 100,
       skipBlankLines: true,
-      skipComments: true,
+      skipComments: true
     }],
     'max-params': ['error', { max: 4 }],
     'no-await-in-loop': 'off',
@@ -45,7 +45,7 @@ module.exports = {
     'no-debugger': 'warn',
     'no-unused-vars': 'warn',
     'object-curly-newline': ['error', {
-      consistent: true,
+      consistent: true
     }],
     'operator-linebreak': ['error', 'after'],
     'prefer-const': ['error', { destructuring: 'all' }],
@@ -56,10 +56,10 @@ module.exports = {
     'vue/eqeqeq': ['warn', 'always'],
     'vue/key-spacing': ['warn', {
       afterColon: true,
-      beforeColon: false,
+      beforeColon: false
     }],
     'vue/max-attributes-per-line': ['warn', {
-      singleline: 3,
+      singleline: 3
     }],
     'vue/multiline-html-element-content-newline': 'off',
     'vue/object-curly-spacing': ['warn', 'always'],
@@ -85,19 +85,9 @@ module.exports = {
         'methods',
         'head',
         ['template', 'render'],
-        'renderError',
-      ],
+        'renderError'
+      ]
     }],
-    'vue/singleline-html-element-content-newline': 'off',
-    'comma-dangle': [
-      'error',
-      {
-        arrays: 'always-multiline',
-        exports: 'always-multiline',
-        functions: 'never',
-        imports: 'always-multiline',
-        objects: 'always-multiline',
-      },
-    ],
-  },
+    'vue/singleline-html-element-content-newline': 'off'
+  }
 }
