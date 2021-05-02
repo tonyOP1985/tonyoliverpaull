@@ -1,21 +1,35 @@
 <template>
-  <div>
-    <TheNavigation />
-    <Nuxt />
+  <div class="app">
+    <TheNavigation class="nav" @openNav="addMarginTop" />
+    <Nuxt :class="['main', { addTopMargin: active }]" />
+    <TheFooter class="footer" />
   </div>
 </template>
 
 <script>
 import TheNavigation from '@/components/navigation/TheNavigation'
+import TheFooter from '@/components/footer/TheFooter'
 
 export default {
   components: {
-    TheNavigation
+    TheNavigation,
+    TheFooter
+  },
+
+  data () {
+    return {
+      active: false
+    }
+  },
+  methods: {
+    addMarginTop (animate) {
+      this.active = animate
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   font-family:
     'Source Sans Pro',
@@ -33,6 +47,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  text-rendering: optimizeLegibility;
 }
 
 *,
@@ -40,34 +62,31 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.addTopMargin {
+  transition: margin-top 0.3s;
+  overflow: hidden;
+  height: 100%;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.app {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.main {
+  flex-grow: 1;
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.nav,
+.main,
+.footer {
+  flex-shrink: 0;
 }
 </style>
