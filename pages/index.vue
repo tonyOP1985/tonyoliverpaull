@@ -94,11 +94,7 @@ export default {
   text-align: left;
   width: 41px;
   height: 41px;
-
-  /* background-color:#0291b4; */
   border-radius: 100%;
-
-  /* color: #fff; */
   color: rgba(238, 237, 237, 0.8);
   transition: all 0.2s ease;
 }
