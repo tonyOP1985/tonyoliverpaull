@@ -22,6 +22,8 @@
         >
           GitHub
         </a>
+        <nuxt-link class="button--green" to="/projects">Projects</nuxt-link>
+        <nuxt-link class="button--green" to="/contact">Contact</nuxt-link>
       </div>
     </div>
   </div>
