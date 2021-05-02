@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <TheNavigation class="nav" @openNav="addMarginTop" />
+    <TheNavigation class="nav" @open-nav="addMarginTop" />
     <Nuxt :class="['main', { addTopMargin: active }]" />
     <TheFooter class="footer" />
   </div>

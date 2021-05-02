@@ -52,7 +52,7 @@ export default {
   methods: {
     openNav (e) {
       this.animate = !this.animate
-      this.$emit('openNav', this.animate)
+      this.$emit('open-nav', this.animate)
     }
   }
 }
@@ -171,14 +171,6 @@ export default {
 .navbar {
   letter-spacing: 2px;
   background-color: #fff;
-
-  /* background-color: #0288D1; */
-
-  /* background-color: rgb(0,0,0); */
-
-  /* background-color: #30c9e8; */
-
-  /* background-color:#02abd6; */
   display: block;
   overflow: hidden;
   height: 64px;
@@ -206,12 +198,6 @@ export default {
 .navbar a {
   display: inline-block;
   position: relative;
-
-  /* color: #fff; */
-
-  /* color: #B3E5FC; */
-
-  /* color: #000; */
   color: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 0 14px;
@@ -298,8 +284,6 @@ li > a::before {
   bottom: 0;
   left: 7%;
   background-color: rgba(0, 0, 0, 0.8);
-
-  /* background-color: #fff; */
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
