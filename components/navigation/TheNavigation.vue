@@ -3,7 +3,7 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
-          <router-link to="/">Tony Oliver-Paull</router-link>
+          <NuxtLink to="/">Tony Oliver-Paull</NuxtLink>
         </div>
         <div
           id="hamburger"
@@ -17,13 +17,13 @@
         </div>
         <ul class="navbar-nav">
           <li>
-            <router-link to="/" class="about">About</router-link>
+            <NuxtLink to="/" class="about">About</NuxtLink>
           </li>
           <li>
-            <router-link to="/projects" class="projects">Projects</router-link>
+            <NuxtLink to="/projects" class="projects">Projects</NuxtLink>
           </li>
           <li>
-            <router-link to="/contact">Contact</router-link>
+            <NuxtLink to="/contact">Contact</NuxtLink>
           </li>
         </ul>
       </div>
@@ -34,9 +34,9 @@
       class="collapse-nav"
       @click.prevent="openNav"
     >
-      <router-link to="/">About</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/contact">Contact</router-link>
+      <NuxtLink to="/">About</NuxtLink>
+      <NuxtLink to="/projects">Projects</NuxtLink>
+      <NuxtLink to="/contact">Contact</NuxtLink>
     </div>
   </header>
 </template>
@@ -253,6 +253,12 @@ export default {
 
 @media (max-width: 700px) {
   .navbar-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  .collapse-nav {
     display: none;
   }
 }
