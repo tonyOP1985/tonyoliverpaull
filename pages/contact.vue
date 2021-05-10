@@ -7,15 +7,34 @@
         </div>
       </template>
     </Jumbotron>
+    <div v-if="submitted" class="msg">
+      {{ msg }}
+    </div>
+    <Form e-else @submit-form="onSubmit" />
   </div>
 </template>
 
 <script>
 import Jumbotron from '@/components/content/Jumbotron'
+import Form from '@/components/form/Form'
 
 export default {
   components: {
-    Jumbotron
+    Jumbotron,
+    Form
+  },
+
+  data () {
+    return {
+      submitted: false,
+      msg: ''
+    }
+  },
+
+  methods: {
+    onSubmit (event) {
+      console.log(event)
+    }
   }
 }
 </script>
