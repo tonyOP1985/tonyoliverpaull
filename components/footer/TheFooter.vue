@@ -2,18 +2,18 @@
   <footer>
     <div class="footer-container">
       <div class="footer-logo">
-        <p>2017 Tony Oliver-Paull</p>
+        <p>2021 Tony Oliver-Paull</p>
       </div>
       <div class="links">
         <div class="links-wrapper">
           <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
-            <i class="fa fa-github fa-2x" aria-hidden="true" />
+            <font-awesome-icon :icon="['fab', 'github']" />
           </a>
           <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
-            <i class="fa fa-linkedin fa-2x" aria-hidden="true" />
+            <font-awesome-icon :icon="['fab', 'linkedin-in']" />
           </a>
           <router-link to="/contact" class="btn icon">
-            <i class="fa fa-envelope fa-2x" aria-hidden="true" />
+            <font-awesome-icon :icon="['fas', 'envelope']" />
           </router-link>
         </div>
       </div>
@@ -47,13 +47,14 @@ footer {
 
 .footer-logo {
   width: 50%;
+  height: 64px;
+  display: flex;
 }
 
 .footer-logo p {
   color: #fff;
-  width: 50%;
-  margin: 0 auto;
   padding-top: 10px;
+  margin: auto;
   text-align: center;
 }
 
@@ -73,6 +74,7 @@ footer {
 .icon {
   color: #777;
   transition: all 0.2s ease;
+  font-size: 2em;
 }
 
 a {
@@ -104,13 +106,17 @@ a:hover {
     height: 100%;
   }
 
-  .container {
+  .footer-container {
     flex-direction: column;
   }
 
   .links-wrapper,
   .footer-logo {
     width: 100%;
+  }
+
+  .footer-logo p {
+    padding-top: 0;
   }
 
   .links {
