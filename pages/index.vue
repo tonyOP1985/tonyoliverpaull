@@ -12,14 +12,14 @@
             </div>
             <div class="link-box">
               <div class="links">
-                <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon github">
-                  <i class="fa fa-github fa-lg" aria-hidden="true" />
+                <a href="https://github.com/tonyOP1985" target="_blank" class="btn icon">
+                  <font-awesome-icon :icon="['fab', 'github']" />
                 </a>
                 <a href="https://www.linkedin.com/in/tony-oliverpaull-62b21434/" target="_blank" class="btn icon">
-                  <i class="fa fa-linkedin fa-lg" aria-hidden="true" />
+                  <font-awesome-icon :icon="['fab', 'linkedin-in']" />
                 </a>
                 <router-link to="/contact" class="btn icon">
-                  <i class="fa fa-envelope" aria-hidden="true" />
+                  <font-awesome-icon :icon="['fas', 'envelope']" />
                 </router-link>
                 <a href="../../static/Anthony_Oliver-Paull_Resume_2018.pdf" target="_blank" class="btn resume">résumé</a>
               </div>
@@ -89,6 +89,7 @@ export default {
 }
 
 .icon {
+  padding-top: 0.15em;
   display: block;
   position: relative;
   text-align: left;
@@ -97,16 +98,11 @@ export default {
   border-radius: 100%;
   color: rgba(238, 237, 237, 0.8);
   transition: all 0.2s ease;
+  font-size: 1.34em;
 }
 
 a {
   text-decoration: none;
-}
-
-.icon i {
-  width: 41px;
-  height: 41px;
-  padding-top: 31%;
 }
 
 .resume {
