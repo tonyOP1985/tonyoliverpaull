@@ -1,5 +1,5 @@
 <template>
-  <div class="technologies">
+  <div>
     <h3>Technologies Used</h3>
     <ul>
       <li
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.technologies ul {
+ul {
   list-style: none;
 }
 
@@ -32,7 +32,7 @@ ul li {
   padding-left: 20px;
 }
 
-ul li:before {
+ul li::before {
   content: "\2014";
   position: absolute;
   margin-left: -20px;

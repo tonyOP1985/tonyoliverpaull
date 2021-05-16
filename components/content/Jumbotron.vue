@@ -1,12 +1,17 @@
 <template>
-  <section>
+  <section :class="{ 'margin-bottom': marginBottom }">
     <slot name="content" />
   </section>
 </template>
 
 <script>
 export default {
-
+  props: {
+    marginBottom: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
@@ -16,5 +21,9 @@ section {
   height: 210px;
   background-color: rgba(72, 206, 181, 0.8);
   color: #fff;
+}
+
+.margin-bottom {
+  margin-bottom: 86px;
 }
 </style>
