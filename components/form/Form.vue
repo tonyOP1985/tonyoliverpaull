@@ -1,29 +1,29 @@
 <template>
   <form method="POST" @submit.prevent="onSubmit">
     <TextInput
+      v-model="form.name"
       label="Name"
       name="name"
-      @update-value="updateValue"
     />
     <TextInput
+      v-model="form.email"
       type="email"
       label="Email"
       name="email"
-      @update-value="updateValue"
     />
     <TextInput
+      v-model="form.phone"
       type="tel"
       label="Phone"
       name="phone"
       :requiredField="false"
-      @update-value="updateValue"
     />
     <TextArea
+      v-model="form.messageBody"
       label="Message"
       name="message"
-      @update-value="updateValue"
     />
-    <button type="submit">SEND</button>
+    <input :disabled="enableButton" type="submit" value="SEND">
   </form>
 </template>
 
@@ -49,11 +49,15 @@ export default {
     }
   },
 
-  methods: {
-    updateValue ({ name, value }) {
-      this.form[name] = value
-    },
+  computed: {
+    enableButton () {
+      const requiredFields = ['name', 'email', 'messageBody']
+      const formValues = requiredFields.map(field => !!this.form[field].length)
+      return formValues.some(value => !value)
+    }
+  },
 
+  methods: {
     onSubmit () {
       this.$emit('submit-form', this.form)
     }
@@ -73,7 +77,7 @@ form {
   flex-direction: column;
 }
 
-button {
+input[type=submit] {
   font-family: "Montserrat", sans-serif;
   padding: 10px 30px;
   margin-top: 10px;
@@ -87,8 +91,13 @@ button {
   transition: all 0.2s ease;
 }
 
-button:hover {
+input[type=submit]:hover {
   background-color: #02abd6;
+}
+
+input[type=submit]:disabled {
+  background-color: #ddd;
+  cursor: default;
 }
 
 @media (max-width: 750px) {

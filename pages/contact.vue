@@ -33,7 +33,7 @@ export default {
 
   methods: {
     onSubmit (event) {
-      console.log(event)
+      // TODO: send request to server
     }
   }
 }

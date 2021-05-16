@@ -1,11 +1,11 @@
 <template>
-  <div class="input-wrapper">
+  <div class="input-wrapper" :class="{ 'pb-3': requiredField }">
     <label :for="name">{{ label }}</label>
     <input
       :type="type"
       :name="name"
       :required="requiredField"
-      @change="updateValue"
+      @input="updateValue"
     >
     <p v-if="!requiredField">(Optional)</p>
   </div>
@@ -33,9 +33,12 @@ export default {
   },
 
   methods: {
-    updateValue ({ target }) {
-      const { name, value } = target
-      this.$emit('update-value', { name, value })
+    updateValue (event) {
+      const value = event?.target?.value
+
+      if (!value) { this.$emit('input', '') }
+
+      this.$emit('input', value)
     }
   }
 }
@@ -44,7 +47,10 @@ export default {
 <style lang="scss" scoped>
 .input-wrapper {
   position: relative;
-  margin-bottom: 10px;
+}
+
+.pb-3 {
+  padding-bottom: 12px;
 }
 
 label {
@@ -54,6 +60,7 @@ label {
 
 p {
   font-size: 12px;
+  height: 20px;
 }
 
 input {
