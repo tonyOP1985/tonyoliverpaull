@@ -29,10 +29,10 @@ export default {
   width: 400px;
   height: 245px;
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 2px 5px 0, rgba(0, 0, 0, 0.12) 0 2px 10px 0;
 }
 
-@media(max-width: 1190px) {
+@media (max-width: 1190px) {
   .project-img img {
     width: 300px;
     height: 184px;
@@ -43,13 +43,13 @@ export default {
   }
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
   .project-img {
     width: 100%;
   }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 400px) {
   .project-img img {
     width: 200px;
     height: 122.5px;
