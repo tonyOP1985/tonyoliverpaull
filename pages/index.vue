@@ -28,15 +28,18 @@
         </div>
       </template>
     </Jumbotron>
+    <TheAboutConent />
   </div>
 </template>
 
 <script>
 import Jumbotron from '@/components/content/Jumbotron'
+import TheAboutConent from '@/components/content/about/TheAboutConent'
 
 export default {
   components: {
-    Jumbotron
+    Jumbotron,
+    TheAboutConent
   }
 }
 </script>
