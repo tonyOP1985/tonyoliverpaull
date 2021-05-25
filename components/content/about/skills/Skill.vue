@@ -21,13 +21,11 @@ export default {
 <style lang="scss" scoped>
 a {
   text-decoration: none;
+  width: 110px;
 }
 
 .devicons {
   height: 120px;
-  width: 90px;
-  display: flex;
-  margin: 10px;
   flex-direction: column;
   text-align: center;
 }
@@ -47,14 +45,14 @@ img {
 @media (max-width: 700px) {
   .devicons {
     height: 100px;
-    width: 70px;
-    margin: 10px;
+    width: 100%;
   }
 
   img {
     height: 70px;
     width: 70px;
     padding: 7px;
+    margin: 0 auto;
   }
 }
 

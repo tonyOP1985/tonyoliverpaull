@@ -66,15 +66,17 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   column-count: 2;
+  margin-top: 10px;
 }
 
 .devicons-wrapper {
   width: 351px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
-@media (max-width: 726px) {
+@media (max-width: 770px) {
   .skills {
     flex-direction: column;
   }
@@ -86,10 +88,6 @@ export default {
 }
 
 @media (max-width: 370px) {
-  .devicons-wrapper {
-    flex-direction: column;
-  }
-
   .skills {
     flex-direction: row;
   }
