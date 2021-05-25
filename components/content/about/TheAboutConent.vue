@@ -5,7 +5,7 @@
         <TheAboutMe />
       </div>
       <div class="row">
-        <!-- The Skills Component goes here -->
+        <Skills />
       </div>
     </div>
   </div>
@@ -13,10 +13,12 @@
 
 <script>
 import TheAboutMe from '@/components/content/about/TheAboutMe'
+import Skills from '@/components/content/about/skills/Skills'
 
 export default {
   components: {
-    TheAboutMe
+    TheAboutMe,
+    Skills
   }
 }
 </script>
