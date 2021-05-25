@@ -30,6 +30,15 @@ export default {
       // TODO: prodects will come from server in future
       projects: [
         {
+          image: '/img/p4p.png',
+          title: 'Pluto For Planet',
+          text: 'Local band website (still in progess).',
+          alt: 'Pluto For Planet',
+          technology: ['Nuxt.js', 'SASS'],
+          projectLink: 'https://p4pdemo.herokuapp.com/',
+          code: ''
+        },
+        {
           image: '/img/portfolio-page-2018-1.png',
           title: 'Tony Oliver-Paull',
           text: 'Current portfolio page.',
