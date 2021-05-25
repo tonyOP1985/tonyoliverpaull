@@ -21,7 +21,7 @@
                 <router-link to="/contact" class="btn icon">
                   <font-awesome-icon :icon="['fas', 'envelope']" />
                 </router-link>
-                <a href="../../static/Anthony_Oliver-Paull_Resume_2018.pdf" target="_blank" class="btn resume">résumé</a>
+                <a href="/Anthony_Oliver-Paull-Resume_2021.pdf" target="_blank" class="btn resume">résumé</a>
               </div>
             </div>
           </header>
