@@ -41,6 +41,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    'nuxt-clipboard'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -57,6 +59,16 @@ export default {
     icons: {
       solid: ['faEnvelope'],
       brands: ['faGithub', 'faLinkedinIn']
+
     }
+  },
+
+  axios: {
+    baseURL: 'http://localhost:5000/api/'
+    // proxy: true
+  },
+
+  clipboard: {
+    autoSetContainer: true
   }
 }

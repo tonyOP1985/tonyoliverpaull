@@ -7,34 +7,18 @@
         </div>
       </template>
     </Jumbotron>
-    <div v-if="submitted" class="msg">
-      {{ msg }}
-    </div>
-    <Form e-else @submit-form="onSubmit" />
+    <Contact />
   </div>
 </template>
 
 <script>
 import Jumbotron from '@/components/content/Jumbotron'
-import Form from '@/components/form/Form'
+import Contact from '@/components/content/contact/Contact.vue'
 
 export default {
   components: {
     Jumbotron,
-    Form
-  },
-
-  data () {
-    return {
-      submitted: false,
-      msg: ''
-    }
-  },
-
-  methods: {
-    onSubmit (event) {
-      // TODO: send request to server
-    }
+    Contact
   }
 }
 </script>
@@ -54,6 +38,13 @@ export default {
   }
 }
 
+.msg {
+  width: 100%;
+  // height: calc(100vh - 210px - 100px - 64px);
+  height: 75vh;
+  text-align: center;
+}
+
 @media (max-width: 740px) {
   .title-main {
     width: 100%;
@@ -65,4 +56,10 @@ export default {
     font-size: 2.5rem;
   }
 }
+
+// @media (max-width: 450px) {
+//   .msg {
+//     height: calc(100vh - 210px - 128px - 64px);
+//   }
+// }
 </style>
