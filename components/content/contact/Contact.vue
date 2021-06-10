@@ -62,7 +62,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// 64 210 100
 section {
+  // height: calc(100vh - 444px);
   width: 40%;
   margin: 30px auto 0;
   background: #fff;
@@ -140,4 +142,10 @@ a {
     width: 288px;
   }
 }
+
+// @media (max-width: 450px) {
+//   section {
+//     height: 45vh;
+//   }
+// }
 </style>

@@ -102,10 +102,6 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  footer {
-    height: 100%;
-  }
-
   .footer-container {
     flex-direction: column;
   }
