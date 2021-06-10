@@ -42,6 +42,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -64,7 +65,7 @@ body {
 
 .app {
   width: 100%;
-  min-height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;

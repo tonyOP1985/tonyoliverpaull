@@ -38,13 +38,6 @@ export default {
   }
 }
 
-.msg {
-  width: 100%;
-  // height: calc(100vh - 210px - 100px - 64px);
-  height: 75vh;
-  text-align: center;
-}
-
 @media (max-width: 740px) {
   .title-main {
     width: 100%;
@@ -56,10 +49,4 @@ export default {
     font-size: 2.5rem;
   }
 }
-
-// @media (max-width: 450px) {
-//   .msg {
-//     height: calc(100vh - 210px - 128px - 64px);
-//   }
-// }
 </style>
